@@ -32,29 +32,33 @@
     [super tearDown];
 }
 
-- (void)testEditing
-{
-    // write tests to verify editing function
-    
-    
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    XCUIElement *button = app.buttons[@"+"];
-    [button tap];
-    
-    XCUIElement *textField = [[[[[app.otherElements containingType:XCUIElementTypeNavigationBar identifier:@"ThirdVC"] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeTextField].element;
-    [textField tap];
-    [textField typeText:@"jupiter"];
-    [button tap];
-    [app.tables.staticTexts[@"jupiter"] tap];
-    [app.buttons[@"Edit"] tap];
-    [app.textFields[@"editTextField"] typeText:@"saturn"];
-    [app.buttons[@"Save"] tap];
-    
-}
-
 - (void)testAdding
 {
     // write tests to verify adding function
+    
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    XCUIElement *buttongotoaddscreenButton = app.buttons[@"buttonGoToAddScreen"];
+    [buttongotoaddscreenButton tap];
+    
+    XCUIElement *textfieldadditemTextField = app.textFields[@"textFieldAddItem"];
+    [textfieldadditemTextField typeText:@"Saturn"];
+    
+    XCUIElement *buttonaddconfirmButton = app.buttons[@"buttonAddConfirm"];
+    [buttonaddconfirmButton tap];
+    [buttongotoaddscreenButton tap];
+    [textfieldadditemTextField typeText:@"Jupiter"];
+    [buttonaddconfirmButton tap];
+    [app.tables.staticTexts[@"Saturn"] tap];
+    [app.buttons[@"buttonEdit"] tap];
+    [app.textFields[@"textFieldEdit"] typeText:@"Venus"];
+    [app.buttons[@"buttonSave"] tap];
+    
+}
+
+- (void)testEditing
+{
+    // write tests to verify editing function
 }
 
 @end

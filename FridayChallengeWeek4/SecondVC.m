@@ -35,16 +35,12 @@
 {
     [super viewWillAppear:animated];
     
-//    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
-//    UITableViewCell *selectedCell = [self.tableView cellForRowAtIndexPath:selectedIndexPath];
-//    
-//    if (selectedCell) {
-//        selectedCell.textLabel.text = arrayForTable[selectedIndexPath.row];
-//    }
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    UITableViewCell *selectedCell = [self.tableView cellForRowAtIndexPath:selectedIndexPath];
     
-    NSLog(@"%@", arrayForTable);
-    
-    [self.tableView reloadData];
+    if (selectedCell) {
+        selectedCell.textLabel.text = arrayForTable[selectedIndexPath.row];
+    }
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
