@@ -26,6 +26,7 @@
     
     [self.navigationController setNavigationBarHidden:false animated:true];
     [self.navigationController setViewControllers:@[self]];
+    self.navigationItem.hidesBackButton = true;
 }
 
 - (void)didReceiveMemoryWarning {
