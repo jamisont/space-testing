@@ -7,12 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@protocol addItemDelegate
-
-- (void)addItem:(NSString *)stringToAdd;
-
-@end
+#import "ModifyArrayDelegate.h"
 
 @interface ThirdVC : UIViewController
 

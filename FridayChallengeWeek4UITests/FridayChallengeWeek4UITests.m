@@ -32,9 +32,29 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testEditing
+{
+    // write tests to verify editing function
+    
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    XCUIElement *button = app.buttons[@"+"];
+    [button tap];
+    
+    XCUIElement *textField = [[[[[app.otherElements containingType:XCUIElementTypeNavigationBar identifier:@"ThirdVC"] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeTextField].element;
+    [textField tap];
+    [textField typeText:@"jupiter"];
+    [button tap];
+    [app.tables.staticTexts[@"jupiter"] tap];
+    [app.buttons[@"Edit"] tap];
+    [app.textFields[@"editTextField"] typeText:@"saturn"];
+    [app.buttons[@"Save"] tap];
+    
+}
+
+- (void)testAdding
+{
+    // write tests to verify adding function
 }
 
 @end

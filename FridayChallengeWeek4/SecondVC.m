@@ -7,6 +7,8 @@
 //
 
 #import "SecondVC.h"
+#import "ThirdVC.h"
+#import "DisplayItemVC.h"
 
 @interface SecondVC ()
 
@@ -29,15 +31,39 @@
     self.navigationItem.hidesBackButton = true;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+//    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+//    UITableViewCell *selectedCell = [self.tableView cellForRowAtIndexPath:selectedIndexPath];
+//    
+//    if (selectedCell) {
+//        selectedCell.textLabel.text = arrayForTable[selectedIndexPath.row];
+//    }
+    
+    NSLog(@"%@", arrayForTable);
+    
+    [self.tableView reloadData];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    ThirdVC *tvc = [segue destinationViewController];
-    tvc.delegateAddItem = self;
+    UIViewController *vc = [segue destinationViewController];
+    
+    NSIndexPath *selectedIndex = [self.tableView indexPathForSelectedRow];
+    
+    if ([vc isKindOfClass:[ThirdVC class]])
+    {
+        ThirdVC *tvc = (ThirdVC *)vc;
+        tvc.delegateAddItem = self;
+    }
+    else if ([vc isKindOfClass:[DisplayItemVC class]])
+    {
+        DisplayItemVC *divc = (DisplayItemVC *)vc;
+        divc.itemToDisplay = arrayForTable[selectedIndex.row];
+        divc.delegateEditItem = self;
+    }
 }
 
 #pragma mark - Delegate methods
@@ -65,6 +91,11 @@
     return [arrayForTable count];
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"displayItem" sender:self];
+}
+
 #pragma mark - Custom Delegate Methods
 
 -(void)addItem:(NSString *)stringToAdd
@@ -80,6 +111,12 @@
     [self.tableView endUpdates];
 }
 
+-(void)replaceString:(NSString *)stringOriginal withString:(NSString *)stringModified
+{
+    NSUInteger indexOfOriginalString = [arrayForTable indexOfObject:stringOriginal];
+    [arrayForTable replaceObjectAtIndex:indexOfOriginalString withObject:stringModified];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -89,6 +126,8 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark IBAction Methods
 
 - (IBAction)pressedAdd:(id)sender {
     [self performSegueWithIdentifier:@"addItem" sender:self];
