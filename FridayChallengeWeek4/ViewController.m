@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "SecondVC.h"
+#import "DisplayTableVC.h"
 
 @interface ViewController ()
 

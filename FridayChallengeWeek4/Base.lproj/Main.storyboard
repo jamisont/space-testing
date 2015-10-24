@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="606" y="319"/>
         </scene>
-        <!--SecondVC-->
+        <!--Display TableVC-->
         <scene sceneID="H9I-ja-wWi">
             <objects>
-                <viewController id="jv0-bs-SgV" customClass="SecondVC" sceneMemberID="viewController">
+                <viewController id="jv0-bs-SgV" customClass="DisplayTableVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ElD-pE-uF9"/>
                         <viewControllerLayoutGuide type="bottom" id="KMB-AX-UnQ"/>

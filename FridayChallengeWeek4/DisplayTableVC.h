@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ModifyArrayDelegate.h"
 
-@interface SecondVC : UIViewController <UITableViewDataSource, UITableViewDelegate, addItemDelegate, editItemDelegate>
+@interface DisplayTableVC : UIViewController <UITableViewDataSource, UITableViewDelegate, addItemDelegate, editItemDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

@@ -6,11 +6,11 @@
 //  Copyright © 2015 Bit Lore Institute. All rights reserved.
 //
 
-#import "SecondVC.h"
+#import "DisplayTableVC.h"
 #import "ThirdVC.h"
 #import "DisplayItemVC.h"
 
-@interface SecondVC ()
+@interface DisplayTableVC ()
 
 {
     NSMutableArray *arrayForTable;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation SecondVC
+@implementation DisplayTableVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
