@@ -38,16 +38,6 @@
 
 #pragma mark - Custom Methods
 
-- (void)toggleHidden
-{
-    [UIView animateWithDuration:2 animations:^{
-        self.buttonCancel.alpha = 1 - self.buttonCancel.alpha;
-        self.buttonEdit.alpha = 1 - self.buttonEdit.alpha;
-        self.buttonSave.alpha = 1 - self.buttonSave.alpha;
-        self.textField.alpha = 1 - self.textField.alpha;
-    }];
-}
-
 - (void)shouldSaveChanges
 {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"About to end editing!" message:@"Would you like to save your changes?" preferredStyle:UIAlertControllerStyleAlert];
@@ -89,7 +79,12 @@
 #pragma mark - IBAction Methods
 
 - (IBAction)pressedEdit:(id)sender {
-    [self toggleHidden];
+    [UIView animateWithDuration:1 animations:^{
+        self.buttonCancel.alpha = .6;
+        self.buttonEdit.alpha = 0;
+        self.buttonSave.alpha = .6;
+        self.textField.alpha = .6;
+    }];
     [self.textField becomeFirstResponder];
 }
 

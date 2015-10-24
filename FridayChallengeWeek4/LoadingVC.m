@@ -6,14 +6,14 @@
 //  Copyright © 2015 Bit Lore Institute. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LoadingVC.h"
 #import "DisplayTableVC.h"
 
-@interface ViewController ()
+@interface LoadingVC ()
 
 @end
 
-@implementation ViewController
+@implementation LoadingVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,7 +23,7 @@
 {
     [super viewDidAppear:animated];
     
-    int duration = 7;
+    int duration = 5;
     
     [UIView animateWithDuration:(duration / 2 + 1) animations:^{
         self.labelLoading.alpha = 0;

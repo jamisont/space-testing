@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface LoadingVC : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewCustom;
 @property (weak, nonatomic) IBOutlet UILabel *labelLoading;

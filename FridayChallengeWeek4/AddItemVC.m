@@ -23,6 +23,7 @@
     [super viewDidLoad];
     
     [self.textField becomeFirstResponder];
+    self.navigationItem.title = @"Add an item";
 }
 
 - (void)didReceiveMemoryWarning {
