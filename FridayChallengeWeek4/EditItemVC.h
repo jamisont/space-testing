@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ModifyArrayDelegate.h"
 
-@interface DisplayItemVC : UIViewController <UITextFieldDelegate>
+@interface EditItemVC : UIViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) NSString *itemToDisplay;
 

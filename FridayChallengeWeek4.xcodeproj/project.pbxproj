@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D84748A31BDAE14F00DC6CF7 /* DisplayItemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D84748A21BDAE14F00DC6CF7 /* DisplayItemVC.m */; settings = {ASSET_TAGS = (); }; };
+		D84748A31BDAE14F00DC6CF7 /* EditItemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D84748A21BDAE14F00DC6CF7 /* EditItemVC.m */; settings = {ASSET_TAGS = (); }; };
 		D8DD54921BDAA16F0052C275 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DD54911BDAA16F0052C275 /* main.m */; };
 		D8DD54951BDAA16F0052C275 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DD54941BDAA16F0052C275 /* AppDelegate.m */; };
 		D8DD54981BDAA16F0052C275 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DD54971BDAA16F0052C275 /* ViewController.m */; };
@@ -38,8 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D84748A11BDAE14F00DC6CF7 /* DisplayItemVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayItemVC.h; sourceTree = "<group>"; };
-		D84748A21BDAE14F00DC6CF7 /* DisplayItemVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayItemVC.m; sourceTree = "<group>"; };
+		D84748A11BDAE14F00DC6CF7 /* EditItemVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditItemVC.h; sourceTree = "<group>"; };
+		D84748A21BDAE14F00DC6CF7 /* EditItemVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditItemVC.m; sourceTree = "<group>"; };
 		D84748A41BDAEE5200DC6CF7 /* ModifyArrayDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyArrayDelegate.h; sourceTree = "<group>"; };
 		D8DD548D1BDAA16F0052C275 /* FridayChallengeWeek4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridayChallengeWeek4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DD54911BDAA16F0052C275 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,8 +97,8 @@
 				D8DD54C41BDAA33F0052C275 /* DisplayTableVC.m */,
 				D8DD54C61BDAB8B30052C275 /* AddItemVC.h */,
 				D8DD54C71BDAB8B30052C275 /* AddItemVC.m */,
-				D84748A11BDAE14F00DC6CF7 /* DisplayItemVC.h */,
-				D84748A21BDAE14F00DC6CF7 /* DisplayItemVC.m */,
+				D84748A11BDAE14F00DC6CF7 /* EditItemVC.h */,
+				D84748A21BDAE14F00DC6CF7 /* EditItemVC.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 				D8DD54951BDAA16F0052C275 /* AppDelegate.m in Sources */,
 				D8DD54C81BDAB8B30052C275 /* AddItemVC.m in Sources */,
 				D8DD54C51BDAA33F0052C275 /* DisplayTableVC.m in Sources */,
-				D84748A31BDAE14F00DC6CF7 /* DisplayItemVC.m in Sources */,
+				D84748A31BDAE14F00DC6CF7 /* EditItemVC.m in Sources */,
 				D8DD54921BDAA16F0052C275 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

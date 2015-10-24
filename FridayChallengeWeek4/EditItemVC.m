@@ -6,13 +6,13 @@
 //  Copyright © 2015 Bit Lore Institute. All rights reserved.
 //
 
-#import "DisplayItemVC.h"
+#import "EditItemVC.h"
 
-@interface DisplayItemVC ()
+@interface EditItemVC ()
 
 @end
 
-@implementation DisplayItemVC
+@implementation EditItemVC
 
 #pragma mark - Default Methods
 

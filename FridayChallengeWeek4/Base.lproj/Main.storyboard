@@ -180,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="1486" y="357"/>
         </scene>
-        <!--Display ItemVC-->
+        <!--Edit ItemVC-->
         <scene sceneID="dr2-AM-rI0">
             <objects>
-                <viewController id="JNy-vb-WAy" customClass="DisplayItemVC" sceneMemberID="viewController">
+                <viewController id="JNy-vb-WAy" customClass="EditItemVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BxE-dm-0Vh"/>
                         <viewControllerLayoutGuide type="bottom" id="9ZZ-Ho-Mag"/>

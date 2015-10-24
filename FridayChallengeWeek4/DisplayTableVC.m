@@ -8,7 +8,7 @@
 
 #import "DisplayTableVC.h"
 #import "AddItemVC.h"
-#import "DisplayItemVC.h"
+#import "EditItemVC.h"
 
 @interface DisplayTableVC ()
 
@@ -54,9 +54,9 @@
         AddItemVC *tvc = (AddItemVC *)vc;
         tvc.delegateAddItem = self;
     }
-    else if ([vc isKindOfClass:[DisplayItemVC class]])
+    else if ([vc isKindOfClass:[EditItemVC class]])
     {
-        DisplayItemVC *divc = (DisplayItemVC *)vc;
+        EditItemVC *divc = (EditItemVC *)vc;
         divc.itemToDisplay = arrayForTable[selectedIndex.row];
         divc.delegateEditItem = self;
     }
