@@ -36,24 +36,38 @@
 {
     // write tests to verify adding function
     
+    NSArray *arrayToTest = [NSArray arrayWithObjects:
+                            @"Saturn",
+                            @"Mars",
+                            @"Earth",
+                            @"Jupiter",
+                            @"Venus",
+                            @"Neptune",
+                            @"Uranus",
+                            @"Mercury",
+                            nil];
+    
     
     XCUIApplication *app = [[XCUIApplication alloc] init];
-    XCUIElement *buttongotoaddscreenButton = app.buttons[@"buttonGoToAddScreen"];
-    [buttongotoaddscreenButton tap];
     
-    XCUIElement *textfieldadditemTextField = app.textFields[@"textFieldAddItem"];
-    [textfieldadditemTextField typeText:@"Saturn"];
+    int indexValue = 0;
     
-    XCUIElement *buttonaddconfirmButton = app.buttons[@"buttonAddConfirm"];
-    [buttonaddconfirmButton tap];
-    [buttongotoaddscreenButton tap];
-    [textfieldadditemTextField typeText:@"Jupiter"];
-    [buttonaddconfirmButton tap];
-    [app.tables.staticTexts[@"Saturn"] tap];
-    [app.buttons[@"buttonEdit"] tap];
-    [app.textFields[@"textFieldEdit"] typeText:@"Venus"];
-    [app.buttons[@"buttonSave"] tap];
-    
+    for (NSString *testString in arrayToTest) {
+        [app.buttons[@"buttonGoToAddScreen"] tap];
+        
+        [app.textFields[@"textFieldAddItem"] tap];
+        
+        [app.textFields[@"textFieldAddItem"] typeText:testString];
+        
+        [app.buttons[@"buttonAddConfirm"] tap];
+        
+        XCUIElement *cell = [app.cells elementBoundByIndex:indexValue];
+        
+        NSString *stringOfLastCell = cell.staticTexts[[NSString stringWithFormat:@"cellTextLabel_%d", indexValue]].label;
+        XCTAssertEqualObjects(stringOfLastCell, testString);
+        
+        indexValue++;
+    }
 }
 
 - (void)testEditing

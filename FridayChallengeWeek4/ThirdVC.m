@@ -17,9 +17,12 @@
 
 @implementation ThirdVC
 
+#pragma mark - Default Methods
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self.textField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,24 +30,28 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Delegate Methods
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self commitChanges];
+    return false;
 }
-*/
+
+#pragma mark - Custom Methods
+
+- (void)commitChanges
+{
+    // Save user input to array and return to view controller displaying list
+    [self.delegateAddItem addItem:self.textField.text];
+    [self.navigationController popViewControllerAnimated:true];
+}
+
+#pragma mark - IBAction Methods
 
 - (IBAction)pressedButton:(id)sender {
     [self commitChanges];
 }
 
-- (void)commitChanges
-{
-    [self.delegateAddItem addItem:self.textField.text];
-    [self.navigationController popViewControllerAnimated:true];
-}
 
 @end

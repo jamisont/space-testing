@@ -29,27 +29,13 @@
         self.labelLoading.alpha = 0;
     }];
     
-//    self.heightConstraintViewObscuring.constant -= self.view.frame.size.height;
-//    
-//    [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionTransitionNone animations:^{
-//        // modify frame
-////        [self.view translatesAutoresizingMaskIntoConstraints];
-////        self.viewObscuring.frame = CGRectMake(0, self.view.frame.size.height, self.viewObscuring.frame.size.width, self.viewObscuring.frame.size.height);
-//        // alternate option: modify constraint directly
-//        [self.view layoutIfNeeded];
-//    } completion:^(BOOL finished) {
-//        [self performSegueWithIdentifier:@"goToSecondScreen" sender:self];
-//    }];
+    self.heightConstraintViewObscuring.constant -= self.view.frame.size.height;
     
-    [UIView transitionWithView:self.view duration:duration options:UIViewAnimationOptionTransitionCurlDown animations:^{
-        [self.viewObscuring setHidden:true];
+    [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionTransitionNone animations:^{
+        [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
         [self performSegueWithIdentifier:@"goToTableView" sender:self];
     }];
-    
-//    [UIView transitionFromView:self.view toView:self.imageViewCustom duration:duration options:UIViewAnimationOptionTransitionCurlDown completion:^(BOOL finished) {
-//        [self performSegueWithIdentifier:@"goToTableView" sender:self];
-//    }];
 }
 
 - (void)didReceiveMemoryWarning {

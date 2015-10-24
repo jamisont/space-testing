@@ -14,6 +14,8 @@
 
 @implementation DisplayItemVC
 
+#pragma mark - Default Methods
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -26,15 +28,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Delegate Methods
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self shouldSaveChanges];
+    return false;
 }
-*/
+
+#pragma mark - Custom Methods
 
 - (void)toggleHidden
 {
@@ -46,18 +48,57 @@
     }];
 }
 
+- (void)shouldSaveChanges
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"About to end editing!" message:@"Would you like to save your changes?" preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self saveChanges];
+    }];
+    UIAlertAction *continueAction = [UIAlertAction actionWithTitle:@"Continue editing" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [self resumeEditing];
+    }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Discard changes" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [self discardChanges];
+    }];
+    
+    [alert addAction:saveAction];
+    [alert addAction:continueAction];
+    [alert addAction:cancelAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)resumeEditing
+{
+    // since alert controller is only presented when textfield is first responder, no code required here
+}
+
+- (void)saveChanges
+{
+    [self.delegateEditItem replaceString:self.itemToDisplay withString:self.textField.text];
+    [self.navigationController popViewControllerAnimated:true];
+}
+
+- (void)discardChanges
+{
+    [self.navigationController popViewControllerAnimated:true];
+}
+
+#pragma mark - IBAction Methods
+
 - (IBAction)pressedEdit:(id)sender {
     [self toggleHidden];
+    [self.textField becomeFirstResponder];
 }
 
 - (IBAction)pressedSave:(id)sender {
-    [self.delegateEditItem replaceString:self.itemToDisplay withString:self.textField.text];
-//    [self toggleHidden];
-    [self.navigationController popViewControllerAnimated:true];
+    [self saveChanges];
 }
 
 - (IBAction)pressedCancel:(id)sender {
-    [self.navigationController popViewControllerAnimated:true];
+    [self discardChanges];
 }
 
 @end

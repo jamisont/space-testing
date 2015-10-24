@@ -77,6 +77,8 @@
     
     cell.textLabel.text = arrayForTable[indexPath.row];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    cell.accessibilityIdentifier = [NSString stringWithFormat:@"cell_%ld", (long)indexPath.row];
+    cell.textLabel.accessibilityIdentifier = [NSString stringWithFormat:@"cellTextLabel_%ld", (long)indexPath.row];
     
     return cell;
     

@@ -88,6 +88,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D84748A51BDC35AD00DC6CF7 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D8DD54961BDAA16F0052C275 /* ViewController.h */,
+				D8DD54971BDAA16F0052C275 /* ViewController.m */,
+				D8DD54C31BDAA33F0052C275 /* SecondVC.h */,
+				D8DD54C41BDAA33F0052C275 /* SecondVC.m */,
+				D8DD54C61BDAB8B30052C275 /* ThirdVC.h */,
+				D8DD54C71BDAB8B30052C275 /* ThirdVC.m */,
+				D84748A11BDAE14F00DC6CF7 /* DisplayItemVC.h */,
+				D84748A21BDAE14F00DC6CF7 /* DisplayItemVC.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		D8DD54841BDAA16F0052C275 = {
 			isa = PBXGroup;
 			children = (
@@ -113,16 +128,9 @@
 			children = (
 				D8DD54931BDAA16F0052C275 /* AppDelegate.h */,
 				D8DD54941BDAA16F0052C275 /* AppDelegate.m */,
-				D8DD54961BDAA16F0052C275 /* ViewController.h */,
-				D8DD54971BDAA16F0052C275 /* ViewController.m */,
 				D84748A41BDAEE5200DC6CF7 /* ModifyArrayDelegate.h */,
 				D8DD54991BDAA16F0052C275 /* Main.storyboard */,
-				D8DD54C31BDAA33F0052C275 /* SecondVC.h */,
-				D8DD54C41BDAA33F0052C275 /* SecondVC.m */,
-				D8DD54C61BDAB8B30052C275 /* ThirdVC.h */,
-				D8DD54C71BDAB8B30052C275 /* ThirdVC.m */,
-				D84748A11BDAE14F00DC6CF7 /* DisplayItemVC.h */,
-				D84748A21BDAE14F00DC6CF7 /* DisplayItemVC.m */,
+				D84748A51BDC35AD00DC6CF7 /* View Controllers */,
 				D8DD549C1BDAA16F0052C275 /* Assets.xcassets */,
 				D8DD549E1BDAA16F0052C275 /* LaunchScreen.storyboard */,
 				D8DD54A11BDAA16F0052C275 /* Info.plist */,
