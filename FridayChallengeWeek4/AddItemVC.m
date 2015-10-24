@@ -6,16 +6,16 @@
 //  Copyright © 2015 Bit Lore Institute. All rights reserved.
 //
 
-#import "ThirdVC.h"
+#import "AddItemVC.h"
 
 
 
-@interface ThirdVC ()
+@interface AddItemVC ()
 
 
 @end
 
-@implementation ThirdVC
+@implementation AddItemVC
 
 #pragma mark - Default Methods
 

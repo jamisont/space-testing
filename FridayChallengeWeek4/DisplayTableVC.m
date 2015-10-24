@@ -7,7 +7,7 @@
 //
 
 #import "DisplayTableVC.h"
-#import "ThirdVC.h"
+#import "AddItemVC.h"
 #import "DisplayItemVC.h"
 
 @interface DisplayTableVC ()
@@ -49,9 +49,9 @@
     
     NSIndexPath *selectedIndex = [self.tableView indexPathForSelectedRow];
     
-    if ([vc isKindOfClass:[ThirdVC class]])
+    if ([vc isKindOfClass:[AddItemVC class]])
     {
-        ThirdVC *tvc = (ThirdVC *)vc;
+        AddItemVC *tvc = (AddItemVC *)vc;
         tvc.delegateAddItem = self;
     }
     else if ([vc isKindOfClass:[DisplayItemVC class]])

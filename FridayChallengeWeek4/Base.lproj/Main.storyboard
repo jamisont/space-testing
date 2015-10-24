@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="1052" y="155"/>
         </scene>
-        <!--ThirdVC-->
+        <!--Add ItemVC-->
         <scene sceneID="TxS-cc-MEk">
             <objects>
-                <viewController id="VdA-Ks-CPN" customClass="ThirdVC" sceneMemberID="viewController">
+                <viewController id="VdA-Ks-CPN" customClass="AddItemVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BnX-5X-wIB"/>
                         <viewControllerLayoutGuide type="bottom" id="5C2-dU-3yP"/>

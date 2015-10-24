@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ModifyArrayDelegate.h"
 
-@interface ThirdVC : UIViewController <UITextFieldDelegate>
+@interface AddItemVC : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (strong, nonatomic) id <addItemDelegate> delegateAddItem;

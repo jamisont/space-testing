@@ -17,7 +17,7 @@
 		D8DD54AB1BDAA16F0052C275 /* FridayChallengeWeek4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DD54AA1BDAA16F0052C275 /* FridayChallengeWeek4Tests.m */; };
 		D8DD54B61BDAA16F0052C275 /* FridayChallengeWeek4UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DD54B51BDAA16F0052C275 /* FridayChallengeWeek4UITests.m */; };
 		D8DD54C51BDAA33F0052C275 /* DisplayTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DD54C41BDAA33F0052C275 /* DisplayTableVC.m */; settings = {ASSET_TAGS = (); }; };
-		D8DD54C81BDAB8B30052C275 /* ThirdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DD54C71BDAB8B30052C275 /* ThirdVC.m */; settings = {ASSET_TAGS = (); }; };
+		D8DD54C81BDAB8B30052C275 /* AddItemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DD54C71BDAB8B30052C275 /* AddItemVC.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +59,8 @@
 		D8DD54B71BDAA16F0052C275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8DD54C31BDAA33F0052C275 /* DisplayTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayTableVC.h; sourceTree = "<group>"; };
 		D8DD54C41BDAA33F0052C275 /* DisplayTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayTableVC.m; sourceTree = "<group>"; };
-		D8DD54C61BDAB8B30052C275 /* ThirdVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdVC.h; sourceTree = "<group>"; };
-		D8DD54C71BDAB8B30052C275 /* ThirdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdVC.m; sourceTree = "<group>"; };
+		D8DD54C61BDAB8B30052C275 /* AddItemVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemVC.h; sourceTree = "<group>"; };
+		D8DD54C71BDAB8B30052C275 /* AddItemVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +95,8 @@
 				D8DD54971BDAA16F0052C275 /* ViewController.m */,
 				D8DD54C31BDAA33F0052C275 /* DisplayTableVC.h */,
 				D8DD54C41BDAA33F0052C275 /* DisplayTableVC.m */,
-				D8DD54C61BDAB8B30052C275 /* ThirdVC.h */,
-				D8DD54C71BDAB8B30052C275 /* ThirdVC.m */,
+				D8DD54C61BDAB8B30052C275 /* AddItemVC.h */,
+				D8DD54C71BDAB8B30052C275 /* AddItemVC.m */,
 				D84748A11BDAE14F00DC6CF7 /* DisplayItemVC.h */,
 				D84748A21BDAE14F00DC6CF7 /* DisplayItemVC.m */,
 			);
@@ -300,7 +300,7 @@
 			files = (
 				D8DD54981BDAA16F0052C275 /* ViewController.m in Sources */,
 				D8DD54951BDAA16F0052C275 /* AppDelegate.m in Sources */,
-				D8DD54C81BDAB8B30052C275 /* ThirdVC.m in Sources */,
+				D8DD54C81BDAB8B30052C275 /* AddItemVC.m in Sources */,
 				D8DD54C51BDAA33F0052C275 /* DisplayTableVC.m in Sources */,
 				D84748A31BDAE14F00DC6CF7 /* DisplayItemVC.m in Sources */,
 				D8DD54921BDAA16F0052C275 /* main.m in Sources */,
