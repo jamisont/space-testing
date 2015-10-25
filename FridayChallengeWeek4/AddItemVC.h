@@ -13,5 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (strong, nonatomic) id <addItemDelegate> delegateAddItem;
+@property (weak, nonatomic) IBOutlet UIView *viewContainer;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewContainerHeightConstraint;
 
 @end

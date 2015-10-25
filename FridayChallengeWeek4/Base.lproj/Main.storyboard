@@ -151,56 +151,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nasa-apod-10-21-2015" translatesAutoresizingMaskIntoConstraints="NO" id="Kkk-QC-Stp">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhM-z1-Qlb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Hu-7C-fK3">
-                                <rect key="frame" x="40" y="269" width="240" height="30"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nasa-apod-10-21-2015" translatesAutoresizingMaskIntoConstraints="NO" id="Kkk-QC-Stp">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Hu-7C-fK3">
+                                        <rect key="frame" x="40" y="269" width="240" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="textFieldAddItem"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="7mx-Tw-NTj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="VdA-Ks-CPN" id="3hM-OF-700"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJA-qh-iDh">
+                                        <rect key="frame" x="145" y="309" width="30" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="buttonAddConfirm"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="fz0-fR-6hA"/>
+                                            <constraint firstAttribute="height" constant="30" id="hrL-EN-LIz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressedButton:" destination="VdA-Ks-CPN" eventType="touchUpInside" id="kEO-BN-evf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <accessibility key="accessibilityConfiguration" identifier="textFieldAddItem"/>
+                                <accessibility key="accessibilityConfiguration" identifier="containerView">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="7mx-Tw-NTj"/>
+                                    <constraint firstItem="Kkk-QC-Stp" firstAttribute="width" secondItem="JhM-z1-Qlb" secondAttribute="width" id="6Dp-c7-jKD"/>
+                                    <constraint firstItem="Kkk-QC-Stp" firstAttribute="height" secondItem="JhM-z1-Qlb" secondAttribute="height" id="CKG-3X-vu9"/>
+                                    <constraint firstItem="Kkk-QC-Stp" firstAttribute="leading" secondItem="JhM-z1-Qlb" secondAttribute="leading" id="HuW-rb-n3Z"/>
+                                    <constraint firstItem="9Hu-7C-fK3" firstAttribute="centerY" secondItem="JhM-z1-Qlb" secondAttribute="centerY" id="XQQ-df-3Zo"/>
+                                    <constraint firstItem="sJA-qh-iDh" firstAttribute="top" secondItem="9Hu-7C-fK3" secondAttribute="bottom" constant="10" id="cTS-gS-xov"/>
+                                    <constraint firstItem="sJA-qh-iDh" firstAttribute="centerX" secondItem="JhM-z1-Qlb" secondAttribute="centerX" id="ddj-tB-hLQ"/>
+                                    <constraint firstItem="9Hu-7C-fK3" firstAttribute="width" secondItem="JhM-z1-Qlb" secondAttribute="width" multiplier="3:4" id="il8-Bh-xhS"/>
+                                    <constraint firstItem="Kkk-QC-Stp" firstAttribute="top" secondItem="JhM-z1-Qlb" secondAttribute="top" id="jaj-bc-MXh"/>
+                                    <constraint firstItem="9Hu-7C-fK3" firstAttribute="centerX" secondItem="JhM-z1-Qlb" secondAttribute="centerX" id="nV5-Me-dzc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="VdA-Ks-CPN" id="3hM-OF-700"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJA-qh-iDh">
-                                <rect key="frame" x="145" y="224" width="30" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration" identifier="buttonAddConfirm"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="fz0-fR-6hA"/>
-                                    <constraint firstAttribute="height" constant="30" id="hrL-EN-LIz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedButton:" destination="VdA-Ks-CPN" eventType="touchUpInside" id="kEO-BN-evf"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sJA-qh-iDh" firstAttribute="centerX" secondItem="zKM-8M-j0W" secondAttribute="centerX" id="6tq-2F-Igi"/>
-                            <constraint firstItem="9Hu-7C-fK3" firstAttribute="top" secondItem="sJA-qh-iDh" secondAttribute="bottom" constant="15" id="80p-7d-CS9"/>
-                            <constraint firstItem="9Hu-7C-fK3" firstAttribute="centerX" secondItem="zKM-8M-j0W" secondAttribute="centerX" id="H15-2f-GJb"/>
-                            <constraint firstItem="5C2-dU-3yP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9Hu-7C-fK3" secondAttribute="bottom" constant="20" id="IXW-DJ-CX5"/>
-                            <constraint firstItem="Kkk-QC-Stp" firstAttribute="width" secondItem="zKM-8M-j0W" secondAttribute="width" id="Ldu-Jv-e2Y"/>
-                            <constraint firstItem="Kkk-QC-Stp" firstAttribute="leading" secondItem="zKM-8M-j0W" secondAttribute="leading" id="Trw-u5-FEe"/>
-                            <constraint firstItem="9Hu-7C-fK3" firstAttribute="centerY" secondItem="zKM-8M-j0W" secondAttribute="centerY" id="Xy7-TN-4Nr"/>
-                            <constraint firstItem="Kkk-QC-Stp" firstAttribute="height" secondItem="zKM-8M-j0W" secondAttribute="height" id="jQp-n6-phB"/>
-                            <constraint firstItem="Kkk-QC-Stp" firstAttribute="top" secondItem="zKM-8M-j0W" secondAttribute="top" id="p8b-vp-i4X"/>
-                            <constraint firstItem="9Hu-7C-fK3" firstAttribute="width" secondItem="zKM-8M-j0W" secondAttribute="width" multiplier="3:4" id="wAq-CJ-5GI"/>
+                            <constraint firstItem="JhM-z1-Qlb" firstAttribute="leading" secondItem="zKM-8M-j0W" secondAttribute="leading" id="17q-Sy-HNl"/>
+                            <constraint firstItem="JhM-z1-Qlb" firstAttribute="height" secondItem="zKM-8M-j0W" secondAttribute="height" id="9aP-hZ-eMl"/>
+                            <constraint firstItem="JhM-z1-Qlb" firstAttribute="width" secondItem="zKM-8M-j0W" secondAttribute="width" id="fdF-WG-6HU"/>
+                            <constraint firstItem="JhM-z1-Qlb" firstAttribute="top" secondItem="zKM-8M-j0W" secondAttribute="top" id="gkr-Cs-cVY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1w5-59-aG6"/>
                     <connections>
                         <outlet property="textField" destination="9Hu-7C-fK3" id="q6l-KD-ZZp"/>
+                        <outlet property="viewContainer" destination="JhM-z1-Qlb" id="pVw-m7-ydk"/>
+                        <outlet property="viewContainerHeightConstraint" destination="9aP-hZ-eMl" id="LEW-p9-0lF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXw-20-YSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
