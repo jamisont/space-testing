@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self.textField becomeFirstResponder];
+    [self.textField becomeFirstResponder];
     self.navigationItem.title = @"Add an item";
     [self registerForKeyboardNotifications];
 }
@@ -73,7 +73,9 @@
     // resize view frame based on keyboard size
     self.viewContainerHeightConstraint.constant = -kbSize.height;
     
-    [self.view layoutIfNeeded];
+    [UIView animateWithDuration:1 animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 
 - (void)keyboardWillBeHidden:(NSNotification *)aNotification
@@ -81,7 +83,9 @@
     // return view container to superview size
     self.viewContainerHeightConstraint.constant = 0;
     
-    [self.view layoutIfNeeded];
+    [UIView animateWithDuration:.1 animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 
 #pragma mark - IBAction Methods

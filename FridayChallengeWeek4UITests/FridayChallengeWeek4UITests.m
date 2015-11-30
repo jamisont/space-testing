@@ -55,8 +55,6 @@
     for (NSString *testString in arrayToTest) {
         [app.buttons[@"buttonGoToAddScreen"] tap];
         
-        [app.textFields[@"textFieldAddItem"] tap];
-        
         [app.textFields[@"textFieldAddItem"] typeText:testString];
         
         [app.buttons[@"buttonAddConfirm"] tap];
